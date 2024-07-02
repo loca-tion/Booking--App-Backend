@@ -22,7 +22,7 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "https://booking-app-frontend-7lsi.onrender.com/",
+    origin: 'http://localhost:5173',
   })
 );
 
