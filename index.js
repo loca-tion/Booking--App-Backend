@@ -22,7 +22,7 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://booking-app-frontend-7lsi.onrender.com/",
   })
 );
 
@@ -34,6 +34,10 @@ function getUserDataFromReq(req) {
     });
   });
 }
+
+app.get("/", (req, res) => {
+  res.json("Hello ok");
+});
 
 app.get("/test", (req, res) => {
   res.json("test ok");
